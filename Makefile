@@ -2,7 +2,7 @@ NAME		= dungeons
 
 # Folders
 SRC_DIR		= src
-INC_DIR		= includes
+INC_DIR		= headers
 TMP_DIR		= .tmp
 
 # Sources
