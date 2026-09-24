@@ -8,25 +8,26 @@ Map::~Map()
 {
 }
 
-void Map::print_map() const{
+void Map::print_map(std::ofstream &file) {
 	for (size_t i = 0; i < this->map.size(); i++) {
 		for (size_t j = 0 ; j < this->map[i].size() ; j++) {
-			std::cout << this->map[i][j];
+			file << this->map[i][j];
 		}
-		std::cout << '\n';
+		file << '\n';
 	}
 }
 
-void Map::generate_spawn() {
+void Map::generate_room(Room &room) {
 
-	size_t spawnW = 5;
-	size_t spawnH = 5;
-	size_t spawnX = this->width / 2 - spawnW / 2;
-	size_t spawnY = this->height / 2 - spawnH / 2;
+	size_t width = room.get_width();
+	size_t height = room.get_height();
+	size_t x = room.get_x();
+	size_t y = room.get_y();
 
-	for (size_t i = spawnY; i < spawnY + spawnH; i++) {
-		for (size_t j = spawnX; j < spawnX + spawnW; j++) {
+	for (size_t i = y; i < y + height; i++) {
+		for (size_t j = x; j < x + width; j++) {
 			this->map[i][j] = '.';
 		}
 	}
 }
+

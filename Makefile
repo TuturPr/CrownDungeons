@@ -25,6 +25,7 @@ DEF_COLOR	= \033[0m
 # Rules
 
 all: $(NAME)
+	@touch output.txt
 
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME) \
@@ -44,6 +45,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm output.txt
 	@printf "%b\n" "$(GREEN)Full clean successful !$(DEF_COLOR)"
 
 re: fclean all

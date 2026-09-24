@@ -7,12 +7,14 @@ class Map
 	private:
 		size_t height;
 		size_t width;
-		std::map<int, Room> roomList;
 
-	public:
+		public:
+		std::vector<Room> roomList;
 		std::vector<std::vector<char>> map;
-		void print_map() const;
+
+		void print_map(std::ofstream &file);
 		void generate_spawn();
+		void generate_room(Room &room);
 		Map(size_t height, size_t width);
 		~Map();
 };
