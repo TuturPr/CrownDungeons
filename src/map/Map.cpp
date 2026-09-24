@@ -8,7 +8,7 @@ Map::~Map()
 {
 }
 
-void Map::print_map() {
+void Map::print_map() const{
 	for (size_t i = 0; i < this->map.size(); i++) {
 		for (size_t j = 0 ; j < this->map[i].size() ; j++) {
 			std::cout << this->map[i][j];
