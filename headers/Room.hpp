@@ -9,7 +9,7 @@ class Room
 		size_t y;
 
 	public:
-		Room(size_t height, size_t width, size_t x, size_t Y);
+		Room(size_t height, size_t width, size_t x, size_t y);
 		~Room();
 		// Room generate();
 		// bool intersect(const Room &other) const;

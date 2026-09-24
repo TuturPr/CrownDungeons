@@ -13,8 +13,8 @@ int main(int argc, char **argv) {
 		} else {
 			seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
 		}
+		std::cout << seed << '\n';
 		std::mt19937 gen(seed);
-
 
 		Map map(std::stoi(argv[1]), std::stoi(argv[2]));
 		map.print_map();

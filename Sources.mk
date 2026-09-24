@@ -1,1 +1,1 @@
-SRC_MAIN := ./src/main.cpp ./src/map/Map.cpp 
+SRC_MAIN := ./src/main.cpp ./src/map/Map.cpp ./src/room/Room.cpp 
