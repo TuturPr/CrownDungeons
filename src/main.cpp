@@ -30,6 +30,10 @@ int main(int argc, char **argv) {
 		int roomsPlaced = 0;
 		int attempts = 0;
 
+		Room spawn(9, 9, mapHeight / 2 - 5, mapWidth / 2 - 5);
+		map.roomList.push_back(spawn);
+		map.generate_room(spawn);
+
 		while (roomsPlaced < MAX_ROOM_NUM && attempts < MAX_ATTEMPTS) {
 			attempts++;
 
